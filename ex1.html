@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ativ 1</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+ 
+</head>
+<body>  
+    <center>
+        <h1>EXERCICIO 1</h1>
+
+    </center>
+    <center>
+    
+    
+    <script>
+        class Posto{
+            constructor() {
+            this.alcool = 2.50;
+            this.gasolina = 4.00;
+            this.litros;
+            this.combust;
+            this.valor = 0;
+            this.pagamento;
+            this.preçodocombustivel;
+            this.nomedocombustivel;
+            }
+            abastecer(){
+                                 
+                
+                    
+                
+                    
+                this.combust = prompt("Digite 1 para gasolina ou 2 para alcool")
+                    
+                       
+            
+                this.litros = Number(prompt("Digite a quantidade de litros que você deseja abastecer"))
+               if(this.combust == '1'){
+                   this.valor = this.gasolina * this.litros
+                   this.preçodocombustivel = this.gasolina
+                   this.nomedocombustivel = 'Gasolina'
+
+                   
+               }
+               else if (this.combust == '2'){
+                   this.valor = this.alcool * this.litros
+                   this.preçodocombustivel = this.alcool
+                   this.nomedocombustivel = 'Alcool'
+                   
+               }
+               else{
+                   alert('Valor Invalido para a opção de combustivel')
+               }
+            }
+            
+             
+                   
+               
+            
+            dc(){
+                this.pagamento = prompt('Digite a forma de pagamento Cartão ou Dinheiro (1 ou 2)')
+                if(this.pagamento == '1'){
+                    this.pagamento = 'Cartão'
+                }
+                else if(this.pagamento == '2'){
+                    this.pagamento = 'Dinheiro'
+                }
+                else{
+                    alert('Valor Invalido para o pagamento')
+                }
+                
+                
+                    
+            }
+            resumo(){
+                document.write("Esta é a quantidade que você abasteceu: " + this.litros + "<br>")
+                document.write("Este foi tipo de combustivel selecionado: " + this.nomedocombustivel + "<br>")
+                document.write("Este é o preço do combutível selecionado: " + this.preçodocombustivel + "<br>")
+                document.write("Este foi o tipo de pagamento selecionado: " + this.pagamento + "<br>")
+                document.write("Este é o valor da compra: $" + this.valor + "<br>")
+            }
+           
+            
+        }
+        let x = new Posto()
+     
+         x.abastecer()
+         x.dc()
+         x.resumo()
+            
+        
+    </script>
+    </center>
+</body>
+</html>
