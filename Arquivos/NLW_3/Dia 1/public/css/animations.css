@@ -1,0 +1,22 @@
+
+/* animação mt foda */
+
+@keyframes up{
+    from{
+        opacity: 0;
+        transform: translateY(16px)
+    
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0)
+
+    }
+
+}
+/* tamanho de duração */
+.animate-up{
+    animation-name: up;
+    animation-duration: 1s; 
+    animation-fill-mode: backwards;
+}
